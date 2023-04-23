@@ -14,12 +14,12 @@
 
     <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css"> -->
     <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"> -->
-    <link href="https://cdn.staticaly.com/gh/hung1001/font-awesome-pro-v6/44659d9/css/all.css" rel="stylesheet"
-        type="text/css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdn.staticaly.com/gh/hung1001/font-awesome-pro-v6/44659d9/css/all.css" rel="stylesheet" type="text/css">
+    <script src="/static/scripts/jquery.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script> -->
 
     <script src="./static/scripts/common.js"></script>
+    <script src="./drawdown.js"></script>
 
     <link rel="stylesheet" href="static/styles/index.css">
     <link rel="stylesheet" href="static/styles/chat.css">
@@ -27,40 +27,30 @@
 </head>
 
 <body>
-    <div id="chat" class="" style="margin-bottom: 120px; margin-top: 12px; margin-left: 12px; justify-content: center; text-align: justify;">
-
-        <div class="chat-message">
-            <img class="avatar" src="https://i0.wp.com/cdn.auth0.com/avatars/ex.png?ssl=1" alt="Avatar">
-            <div class="message-content">
-                <div class="message-header">
-                    <h3 class="sender-name">User</h3>
-                    <small class="message-time">19:44</small>
-                </div>
-                <p class="message-text">Это простой текст сообщения.Это простой текст сообщения.Это простой текст сообщения.Это простой текст сообщения.Это простой текст сообщения.Это простой текст сообщения.Это простой текст сообщения.Это простой текст сообщения.Это простой текст сообщения.Это простой текст сообщения.Это простой текст сообщения.Это простой текст сообщения.Это простой текст сообщения.Это простой текст сообщения.Это простой текст сообщения..</p>
-            </div>
-        </div>
-
+    <div id="chat">
         <div class="chat-message">
             <img class="avatar" src="./static/images/openai-nobg.png" alt="Avatar">
             <div class="message-content">
                 <div class="message-header">
                     <h3 class="sender-name">Assistant</h3>
-                    <small class="message-time">19:45</small>
+                    <small class="message-time" id="welcome_message_time"></small>
                 </div>
-                <div class="message-text">Это простой текст сообщения.</div>
+                <div class="message-text" id="welcome_message">
+                    <p>Welcome to alternative ChatGPT client - <b>BerryGPT</b>! Write me any message in Markdown format! Send me <code>/help</code> command if you have any questions about my work.</p>
+                </div>
             </div>
         </div>
 
     </div>
 
-    <div id="container">
-        <textarea id="textarea" rows="1" placeholder="Send a message..." style="height: 32px;"></textarea>
-        <button id="send"><i class="fa-solid fa-paper-plane-top" style="font-size: 20px;"></i></button>
+    <div style="width: 100%;">
+        <div id="container">
+            <textarea id="textarea" rows="1" placeholder="Send a message..." style="height: 32px;"></textarea>
+        </div>
     </div>
 
     <script src="index.js"></script>
     <script src="openai.js"></script>
-    <script src="drawdown.js"></script>
 </body>
 
 </html>

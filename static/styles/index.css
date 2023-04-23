@@ -10,8 +10,9 @@
     --text-error: var(--color-error);
 
     --background-primary: #230015;
+    --background-chat: #340621;
     --default-text-primary: #ffffff;
-    --default-text-code: var(--pink);
+    --default-text-code: rgb(121, 206, 1);
     --default-font-size: 16px;
     --default-textarea-bg: #481433;
 }
@@ -68,11 +69,14 @@ s::-webkit-scrollbar-track {
 */
 html {
     -webkit-text-size-adjust: 100%;
-    font-family: 'Söhne', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Helvetica Neue, Arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
     line-height: 1.5;
     tab-size: 4;
     overflow-x: hidden;
     font-size: var(--default-font-size);
+}
+
+b {
+    font-family: halbfett;
 }
 
 * {
@@ -84,13 +88,14 @@ html {
     padding: 0;
 }
 
-code,pre {
+code,
+pre {
     color: var(--default-text-code);
     font-family: 'mono-halbfett';
     font-weight: 400;
 }
 
-.shadow-back-1 > * {
+.shadow-back-1>* {
     box-shadow: 5px 5px 10px #1b0303e6;
 }
 
@@ -111,6 +116,14 @@ textarea {
     resize: none;
 }
 
+#chat {
+    margin: 5% 10%;
+    margin-bottom: 120px;
+    justify-content: center;
+    text-align: justify;
+    height: 100%;
+}
+
 #container {
     position: fixed;
     bottom: 0;
@@ -119,16 +132,18 @@ textarea {
     /* z-index: 1030; */
 }
 
-#container > * {
+#container>* {
     background-color: var(--default-textarea-bg);
     font-size: calc(var(--default-font-size) + 1px);
 }
+
 #textarea {
     width: 80%;
     height: 50px;
     margin: 0 auto;
     resize: none;
-    overflow: hidden;
+    /* overflow: hidden; */
+    max-height: 200px;
     border-radius: 10px;
     border: none;
     padding: 5px 20px;
@@ -143,53 +158,3 @@ textarea {
     /* right: 10px; */
     /* bottom: 15px; */
 }
-
-/* .textarea {
-    padding: 10px 15px;
-    border: 0px solid #ccc;
-    border-radius: 10px;
-    background-color: var(--default-textarea-bg);
-    font-size: calc(var(--default-font-size) + 1px);
-    font-family: 'Söhne', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Helvetica Neue, Arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;;
-    resize: none;
-    max-height: 200px;
-}
-
-.fixed-textarea {
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 900px;
-    margin: 10px auto;
-    resize: none;
-  }
-
-.hide-css-input-textarea {
-    background-color: var(--default-textarea-bg);
-    box-shadow: none;
-    border: none;
-    justify-content: center;
-}
-
-div#inputs > * {
-    background-color: var(--default-textarea-bg);
-} */
-
-/* div#inputs {
-    position: fixed;
-    bottom: 0;
-    text-align: center;
-    width: 100%;
-    padding: 1%;
-}
-
-div#inputs > * {
-    display: inline;
-}
-
-div#inputs > textarea {
-    width: 70%;
-    max-width: 1000px;
-} */
