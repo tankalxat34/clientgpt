@@ -74,6 +74,16 @@ var messageHandler = (text) => {
         } catch {
             drawMessage(`Invalid command. Please, use \`/help\` to know about commands`);
         }
+    } else {
+        ChatGPT.ask(t)
+            .then(r => {
+                console.log(r);
+                drawMessage(r.choices[0].message);
+            })
+            .catch(e => {
+                console.log(e);
+                drawMessage(`${e}`);
+            })
     }
 }
 
