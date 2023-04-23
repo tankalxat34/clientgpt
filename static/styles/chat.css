@@ -1,0 +1,52 @@
+:root {
+    --avatar-width: 50px;
+}
+
+.chat-message {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: var(--avatar-width);
+    height: var(--avatar-width);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.message-content {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    /* Фиксированная ширина блока сообщения */
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.sender-name {
+    font-family: 'halbfett';
+    margin-right: 10px;
+    font-weight: 900;
+    font-size: 20px;
+    /* Увеличиваем размер шрифта */
+}
+
+.message-time {
+    font-style: italic;
+}
+
+.message-text {
+    font-size: 16px;
+    line-height: 1.8;
+    /* white-space: nowrap; Запрещаем перенос текста */
+    /* overflow: hidden; Скрываем полностью текст, который не помещается */
+    /* text-overflow: ellipsis; Добавляем многоточие в конец */
+}

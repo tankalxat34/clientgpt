@@ -1,0 +1,195 @@
+:root {
+    --color-primary: #19c37d;
+    --color-secondary: #715fde;
+    --color-error: #ef4146;
+    --gradient-primary: linear-gradient(90deg, #a29bd4, #989fdd);
+    --text-primary: #202123;
+    --text-default: #353740;
+    --text-secondary: #6e6e80;
+    --text-disabled: #acacbe;
+    --text-error: var(--color-error);
+
+    --background-primary: #230015;
+    --default-text-primary: #ffffff;
+    --default-text-code: var(--pink);
+    --default-font-size: 16px;
+    --default-textarea-bg: #481433;
+}
+
+::-webkit-scrollbar {
+    height: 1rem;
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    --tw-border-opacity: 1;
+    background-color: rgba(115, 22, 106, 0.658);
+    border-color: rgba(255, 255, 255, var(--tw-border-opacity));
+    border-radius: 9999px;
+    border-width: 1px;
+}
+
+s::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 9999px;
+}
+
+
+@font-face {
+    font-family: 'buch';
+    src: url('../../static/fonts/soehne-buch.woff2');
+}
+
+@font-face {
+    font-family: 'halbfett';
+    src: url('../../static/fonts/soehne-halbfett.woff2');
+}
+
+@font-face {
+    font-family: 'mono-buch';
+    src: url('../../static/fonts/soehne-mono-buch.woff2');
+}
+
+@font-face {
+    font-family: 'mono-halbfett';
+    src: url('../../static/fonts/soehne-mono-halbfett.woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Söhne;
+    font-style: normal;
+    font-weight: 700;
+    src: url('../../static/fonts/soehne-buch.woff2') format("woff2")
+}
+
+/*
+    BLOCKS
+*/
+html {
+    -webkit-text-size-adjust: 100%;
+    font-family: 'Söhne', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Helvetica Neue, Arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    line-height: 1.5;
+    tab-size: 4;
+    overflow-x: hidden;
+    font-size: var(--default-font-size);
+}
+
+* {
+    font-family: 'Söhne', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Helvetica Neue, Arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    background-color: var(--background-primary);
+    color: var(--default-text-primary);
+    font-size: var(--default-font-size);
+    margin: 0;
+    padding: 0;
+}
+
+code,pre {
+    color: var(--default-text-code);
+    font-family: 'mono-halbfett';
+    font-weight: 400;
+}
+
+.shadow-back-1 > * {
+    box-shadow: 5px 5px 10px #1b0303e6;
+}
+
+/*
+    INPUTS, TEXTAREAS, BUTTONS
+*/
+
+::placeholder {
+    color: rgba(194, 194, 194, 0.588);
+    /* text-align: center; */
+    /* font-size: 1.5em; */
+}
+
+input,
+button,
+textarea {
+    outline: none;
+    resize: none;
+}
+
+#container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    /* z-index: 1030; */
+}
+
+#container > * {
+    background-color: var(--default-textarea-bg);
+    font-size: calc(var(--default-font-size) + 1px);
+}
+#textarea {
+    width: 80%;
+    height: 50px;
+    margin: 0 auto;
+    resize: none;
+    overflow: hidden;
+    border-radius: 10px;
+    border: none;
+    padding: 5px 20px;
+    max-width: 800px;
+}
+
+#send {
+    position: absolute;
+    border: none;
+    background-color: var(--default-textarea-bg);
+    /* bottom: 20%; */
+    /* right: 10px; */
+    /* bottom: 15px; */
+}
+
+/* .textarea {
+    padding: 10px 15px;
+    border: 0px solid #ccc;
+    border-radius: 10px;
+    background-color: var(--default-textarea-bg);
+    font-size: calc(var(--default-font-size) + 1px);
+    font-family: 'Söhne', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Helvetica Neue, Arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;;
+    resize: none;
+    max-height: 200px;
+}
+
+.fixed-textarea {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 900px;
+    margin: 10px auto;
+    resize: none;
+  }
+
+.hide-css-input-textarea {
+    background-color: var(--default-textarea-bg);
+    box-shadow: none;
+    border: none;
+    justify-content: center;
+}
+
+div#inputs > * {
+    background-color: var(--default-textarea-bg);
+} */
+
+/* div#inputs {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    padding: 1%;
+}
+
+div#inputs > * {
+    display: inline;
+}
+
+div#inputs > textarea {
+    width: 70%;
+    max-width: 1000px;
+} */
